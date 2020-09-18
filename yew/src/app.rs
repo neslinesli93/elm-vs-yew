@@ -26,7 +26,7 @@ impl Component for App {
             (window().inner_height().unwrap().as_f64().unwrap() / 20.0).ceil() as usize;
 
         let inner_width =
-            (window().inner_width().unwrap().as_f64().unwrap() / 20.0).ceil() as usize;
+            (window().inner_width().unwrap().as_f64().unwrap() / 20.0).floor() as usize;
 
         debug!("Creating a grid {:?}x{:?}", inner_height, inner_width);
 

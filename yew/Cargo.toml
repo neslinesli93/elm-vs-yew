@@ -1,14 +1,14 @@
 [package]
-name = "yew-wasm-pack-template"
-version = "0.2.0"
-authors = ["Yew Maintainers <maintainers@yew.rs"]
+name = "yew"
+version = "0.0.1"
+authors = ["Tommaso Pifferi"]
 edition = "2018"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-log = "0.4"
+log = { version = "0.4", features = ["release_max_level_info"] }
 strum = "0.17"
 strum_macros = "0.17"
 serde = "1"

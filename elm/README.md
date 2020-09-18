@@ -1,4 +1,4 @@
-# Elm App
+# Elm
 
 This project is bootstrapped with [Create Elm App](https://github.com/halfzebra/create-elm-app).
 
@@ -7,51 +7,51 @@ You can find the most recent version of this guide [here](https://github.com/hal
 
 ## Table of Contents
 
-* [Sending feedback](#sending-feedback)
-* [Folder structure](#folder-structure)
-* [Installing Elm packages](#installing-elm-packages)
-* [Installing JavaScript packages](#installing-javascript-packages)
-* [Available scripts](#available-scripts)
-  * [elm-app build](#elm-app-build)
-  * [elm-app start](#elm-app-start)
-  * [elm-app install](#elm-app-install)
-  * [elm-app test](#elm-app-test)
-  * [elm-app eject](#elm-app-eject)
-  * [elm-app \<elm-platform-command\>](#elm-app-elm-platform-command)
-    * [package](#package)
-    * [repl](#repl)
-    * [make](#make)
-    * [reactor](#reactor)
-* [Turning on/off Elm Debugger](#turning-onoff-elm-debugger)
-* [Dead code elimination](#dead-code-elimination)
-* [Changing the Page `<title>`](#changing-the-page-title)
-* [JavaScript Interop](#javascript-interop)
-* [Adding a Stylesheet](#adding-a-stylesheet)
-* [Post-Processing CSS](#post-processing-css)
-* [Using elm-css](#using-elm-css)
-* [Adding a CSS Preprocessor (Sass, Less etc.)](#adding-a-css-preprocessor-sass-less-etc)
-* [Adding Images and Fonts](#adding-images-and-fonts)
-* [Using the `public` Folder](#using-the-public-folder)
-  * [Changing the HTML](#changing-the-html)
-  * [Adding Assets Outside of the Module System](#adding-assets-outside-of-the-module-system)
-  * [When to Use the `public` Folder](#when-to-use-the-public-folder)
-* [Using custom environment variables](#using-custom-environment-variables)
-* [Setting up API Proxy](#setting-up-api-proxy)
-* [Using HTTPS in Development](#using-https-in-development)
-* [Running tests](#running-tests)
-  * [Continuous Integration](#continuous-integration)
-* [Making a Progressive Web App](#making-a-progressive-web-app)
-  * [Opting Out of Caching](#opting-out-of-caching)
-  * [Offline-First Considerations](#offline-first-considerations)
-  * [Progressive Web App Metadata](#progressive-web-app-metadata)
-* [Overriding Webpack Config](#overriding-webpack-config)
-* [Configuring the Proxy Manually](#configuring-the-proxy-manually)
-* [Deployment](#deployment)
-  * [Building for Relative Paths](#building-for-relative-paths)
-  * [Static Server](#static-server)
-  * [Netlify](#netlify)
-  * [GitHub Pages](#github-pages)
-* [IDE setup for Hot Module Replacement](#ide-setup-for-hot-module-replacement)
+- [Sending feedback](#sending-feedback)
+- [Folder structure](#folder-structure)
+- [Installing Elm packages](#installing-elm-packages)
+- [Installing JavaScript packages](#installing-javascript-packages)
+- [Available scripts](#available-scripts)
+  - [elm-app build](#elm-app-build)
+  - [elm-app start](#elm-app-start)
+  - [elm-app install](#elm-app-install)
+  - [elm-app test](#elm-app-test)
+  - [elm-app eject](#elm-app-eject)
+  - [elm-app \<elm-platform-command\>](#elm-app-elm-platform-command)
+    - [package](#package)
+    - [repl](#repl)
+    - [make](#make)
+    - [reactor](#reactor)
+- [Turning on/off Elm Debugger](#turning-onoff-elm-debugger)
+- [Dead code elimination](#dead-code-elimination)
+- [Changing the Page `<title>`](#changing-the-page-title)
+- [JavaScript Interop](#javascript-interop)
+- [Adding a Stylesheet](#adding-a-stylesheet)
+- [Post-Processing CSS](#post-processing-css)
+- [Using elm-css](#using-elm-css)
+- [Adding a CSS Preprocessor (Sass, Less etc.)](#adding-a-css-preprocessor-sass-less-etc)
+- [Adding Images and Fonts](#adding-images-and-fonts)
+- [Using the `public` Folder](#using-the-public-folder)
+  - [Changing the HTML](#changing-the-html)
+  - [Adding Assets Outside of the Module System](#adding-assets-outside-of-the-module-system)
+  - [When to Use the `public` Folder](#when-to-use-the-public-folder)
+- [Using custom environment variables](#using-custom-environment-variables)
+- [Setting up API Proxy](#setting-up-api-proxy)
+- [Using HTTPS in Development](#using-https-in-development)
+- [Running tests](#running-tests)
+  - [Continuous Integration](#continuous-integration)
+- [Making a Progressive Web App](#making-a-progressive-web-app)
+  - [Opting Out of Caching](#opting-out-of-caching)
+  - [Offline-First Considerations](#offline-first-considerations)
+  - [Progressive Web App Metadata](#progressive-web-app-metadata)
+- [Overriding Webpack Config](#overriding-webpack-config)
+- [Configuring the Proxy Manually](#configuring-the-proxy-manually)
+- [Deployment](#deployment)
+  - [Building for Relative Paths](#building-for-relative-paths)
+  - [Static Server](#static-server)
+  - [Netlify](#netlify)
+  - [GitHub Pages](#github-pages)
+- [IDE setup for Hot Module Replacement](#ide-setup-for-hot-module-replacement)
 
 ## Sending feedback
 
@@ -78,8 +78,8 @@ npm install --save-dev pouchdb-browser # Install library from npm
 
 ```js
 // Use in your JS code
-import PouchDB from 'pouchdb-browser';
-const db = new PouchDB('mydb');
+import PouchDB from "pouchdb-browser";
+const db = new PouchDB("mydb");
 ```
 
 ## Folder structure
@@ -106,9 +106,9 @@ my-app/
 
 For the project to build, these files must exist with exact filenames:
 
-* `public/index.html` is the page template;
-* `public/favicon.ico` is the icon you see in the browser tab;
-* `src/index.js` is the JavaScript entry point.
+- `public/index.html` is the page template;
+- `public/favicon.ico` is the icon you see in the browser tab;
+- `src/index.js` is the JavaScript entry point.
 
 You can delete or rename the other files.
 
@@ -137,6 +137,7 @@ You will also see any lint errors in the console.
 You may change the listening port number by using the `PORT` environment variable. For example type `PORT=8000 elm-app start ` into the terminal/bash to run it from: [http://localhost:8000/](http://localhost:8000/).
 
 You can prevent the browser from opening automatically,
+
 ```sh
 elm-app start --no-browser
 ```
@@ -215,14 +216,14 @@ In the following example we will use JavaScript to write a log in the console, e
 `src/index.js` file to look like this:
 
 ```js
-import { Elm } from './Main.elm';
+import { Elm } from "./Main.elm";
 
 const app = Elm.Main.init({
-  node: document.getElementById('root')
+  node: document.getElementById("root"),
 });
 
-app.ports.logger.subscribe(message => {
-  console.log('Port emitted a new message: ' + message);
+app.ports.logger.subscribe((message) => {
+  console.log("Port emitted a new message: " + message);
 });
 ```
 
@@ -274,7 +275,7 @@ body {
 ### `index.js`
 
 ```js
-import './main.css'; // Tell Webpack to pick-up the styles from main.css
+import "./main.css"; // Tell Webpack to pick-up the styles from main.css
 ```
 
 ## Post-Processing CSS
@@ -408,7 +409,7 @@ This will generate a file called `style.css`
 Add the following line to your `src/index.js`:
 
 ```js
-import './style.css';
+import "./style.css";
 ```
 
 ### Step 6: Using the stylesheet in your Elm code
@@ -476,15 +477,15 @@ To enable importing files without using relative paths, you can add the `--inclu
 ```json
 {
   "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-  "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+  "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
 }
 ```
 
 This will allow you to do imports like
 
 ```scss
-@import 'styles/_colors.scss'; // assuming a styles directory under src/
-@import 'nprogress/nprogress'; // importing a css file from the nprogress node module
+@import "styles/_colors.scss"; // assuming a styles directory under src/
+@import "nprogress/nprogress"; // importing a css file from the nprogress node module
 ```
 
 At this point you might want to remove all CSS files from the source control, and add `src/**/*.css` to your `.gitignore` file. It is generally a good practice to keep the build products outside of the source control.
@@ -493,11 +494,11 @@ At this point you might want to remove all CSS files from the source control, an
 
 `node-sass` has been reported as having the following issues:
 
-* `node-sass --watch` has been reported to have _performance issues_ in certain conditions when used in a virtual machine or with docker.
+- `node-sass --watch` has been reported to have _performance issues_ in certain conditions when used in a virtual machine or with docker.
 
-* Infinite styles compiling [#1939](https://github.com/facebookincubator/create-react-app/issues/1939)
+- Infinite styles compiling [#1939](https://github.com/facebookincubator/create-react-app/issues/1939)
 
-* `node-sass` has been reported as having issues with detecting new files in a directory [#1891](https://github.com/sass/node-sass/issues/1891)
+- `node-sass` has been reported as having issues with detecting new files in a directory [#1891](https://github.com/sass/node-sass/issues/1891)
 
 `node-sass-chokidar` is used here as it addresses these issues.
 
@@ -510,11 +511,11 @@ By requiring an image in JavaScript code, you tell Webpack to add a file to the 
 Here is an example:
 
 ```js
-import logoPath from './logo.svg'; // Tell Webpack this JS file uses this image
-import { Main } from './Main.elm';
+import logoPath from "./logo.svg"; // Tell Webpack this JS file uses this image
+import { Main } from "./Main.elm";
 
 Main.embed(
-  document.getElementById('root'),
+  document.getElementById("root"),
   logoPath // Pass image path as a flag for Html.programWithFlags
 );
 ```
@@ -545,9 +546,9 @@ Note that we normally encourage you to `import` assets in JavaScript files inste
 For example, see the sections on [adding a stylesheet](#adding-a-stylesheet) and [adding images and fonts](#adding-images-fonts-and-files).
 This mechanism provides a few benefits:
 
-* Scripts and stylesheets get minified and bundled together to avoid extra network requests.
-* Missing files cause compilation errors instead of 404 errors for your users.
-* Result filenames include content hashes, so you don’t need to worry about browsers caching their old versions.
+- Scripts and stylesheets get minified and bundled together to avoid extra network requests.
+- Missing files cause compilation errors instead of 404 errors for your users.
+- Result filenames include content hashes, so you don’t need to worry about browsers caching their old versions.
 
 However, there is a **escape hatch** that you can use to add an asset outside of the module system.
 
@@ -556,7 +557,7 @@ If you put a file into the `public` folder, it will **not** be processed by Webp
 Inside `index.html`, you can use it like this:
 
 ```html
-<link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 ```
 
 Only files inside the `public` folder will be accessible by `%PUBLIC_URL%` prefix. If you need to use a file from `src` or `node_modules`, you’ll have to copy it there to explicitly specify your intention to make this file a part of the build.
@@ -576,24 +577,24 @@ img [ src "%PUBLIC_URL%/logo.svg" ] []
 In JavaScript code, you can use `process.env.PUBLIC_URL` for similar purposes:
 
 ```js
-const logo = `<img src=${process.env.PUBLIC_URL + '/img/logo.svg'} />`;
+const logo = `<img src=${process.env.PUBLIC_URL + "/img/logo.svg"} />`;
 ```
 
 Keep in mind the downsides of this approach:
 
-* None of the files in `public` folder get post-processed or minified.
-* Missing files will not be called at compilation time, and will cause 404 errors for your users.
-* Result filenames won’t include content hashes so you’ll need to add query arguments or rename them every time they change.
+- None of the files in `public` folder get post-processed or minified.
+- Missing files will not be called at compilation time, and will cause 404 errors for your users.
+- Result filenames won’t include content hashes so you’ll need to add query arguments or rename them every time they change.
 
 ### When to Use the `public` Folder
 
 Normally we recommend importing [stylesheets](#adding-a-stylesheet), [images, and fonts](#adding-images-fonts-and-files) from JavaScript.
 The `public` folder is used as a workaround for some less common cases:
 
-* You need a file with a specific name in the build output, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
-* You have thousands of images and need to dynamically reference their paths.
-* You want to include a small script like [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) outside of the bundled code.
-* Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
+- You need a file with a specific name in the build output, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+- You have thousands of images and need to dynamically reference their paths.
+- You want to include a small script like [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) outside of the bundled code.
+- Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
 
 Note that if you add a `<script>` that declares global variables, you also need to read the next section on using them.
 
@@ -625,11 +626,11 @@ Passing the variables to your Elm-code can be done via `flags`:
 
 ```javascript
 // index.js
-import { Main } from './Main.elm';
+import { Main } from "./Main.elm";
 
 Main.fullscreen({
   environment: process.env.NODE_ENV,
-  apiKey: process.env.ELM_APP_API_KEY
+  apiKey: process.env.ELM_APP_API_KEY,
 });
 ```
 
@@ -650,7 +651,6 @@ Be aware that you cannot override `NODE_ENV` manually. See
 for a list of files you can use to declare environment variables.
 
 **Note: Changes to your `.env` are only picked up on `elm-app start`. This means that you have to restart your server for your .env file changes to be picked up!**
-
 
 ## Setting up API Proxy
 
@@ -695,7 +695,7 @@ language: node_js
 sudo: required
 
 node_js:
-  - '7'
+  - "7"
 
 install:
   - npm i create-elm-app -g
@@ -713,9 +713,9 @@ By default, the production build is a fully functional, offline-first
 
 Progressive Web Apps are faster and more reliable than traditional web pages, and provide an engaging mobile experience:
 
-* All static site assets are cached so that your page loads fast on subsequent visits, regardless of network connectivity (such as 2G or 3G). Updates are downloaded in the background.
-* Your app will work regardless of network state, even if offline. This means your users will be able to use your app at 10,000 feet and on the Subway.
-* On mobile devices, your app can be added directly to the user's home screen, app icon and all. You can also re-engage users using web **push notifications**. This eliminates the need for the app store.
+- All static site assets are cached so that your page loads fast on subsequent visits, regardless of network connectivity (such as 2G or 3G). Updates are downloaded in the background.
+- Your app will work regardless of network state, even if offline. This means your users will be able to use your app at 10,000 feet and on the Subway.
+- On mobile devices, your app can be added directly to the user's home screen, app icon and all. You can also re-engage users using web **push notifications**. This eliminates the need for the app store.
 
 The [`workbox-webpack-plugin`](https://www.npmjs.com/package/workbox-webpack-plugin)
 is integrated into production configuration,
@@ -779,8 +779,8 @@ module.exports = {
   configureWebpack: (config, env) => {
     // Manipulate the config object and return it.
     return config;
-  }
-}
+  },
+};
 ```
 
 Mutate the configuration directly or use [webpack-merge](https://www.npmjs.com/package/webpack-merge) to override the config.
@@ -788,7 +788,7 @@ Mutate the configuration directly or use [webpack-merge](https://www.npmjs.com/p
 `env` variable will help you distinguish `"development"` from `"production"` for environment-specific overrides.
 
 ## Configuring the Proxy Manually
- 
+
 If the `proxy` option is not flexible enough for you, you can get direct access to the Express app instance and hook up your own proxy middleware.
 
 You can use this feature in conjunction with the `proxy` property in `elmapp.config.js`, but it is recommended you consolidate all of your logic into `setupProxy` property`.
@@ -803,24 +803,24 @@ $ npm install http-proxy-middleware --save
 Next, create `elmapp.config.js` in the root of your project and place the following contents in it:
 
 ```js
-const proxy = require('http-proxy-middleware');
+const proxy = require("http-proxy-middleware");
 
 module.exports = {
-  setupProxy: function(app) {
+  setupProxy: function (app) {
     // ...
-  }
+  },
 };
 ```
 
 You can now register proxies as you wish! Here's an example using the above http-proxy-middleware:
 
 ```js
-const proxy = require('http-proxy-middleware');
+const proxy = require("http-proxy-middleware");
 
 module.exports = {
-  setupProxy: function(app) {
-    app.use(proxy('/api', { target: 'http://localhost:5000/' }));
-  }
+  setupProxy: function (app) {
+    app.use(proxy("/api", { target: "http://localhost:5000/" }));
+  },
 };
 ```
 
@@ -836,8 +836,8 @@ To override this, specify the `homepage` in your `elmapp.config.js`, for example
 
 ```js
 module.exports = {
-    homepage: "http://mywebsite.com/relativepath"
-}
+  homepage: "http://mywebsite.com/relativepath",
+};
 ```
 
 This will let Create Elm App correctly infer the root path to use in the generated HTML file.
@@ -862,23 +862,31 @@ serve -h
 ### Netlify
 
 #### Step 1: Create a `package.json` file
+
 #### Step 2: `npm install --save-dev create-elm-app`
+
 Since netlify runs the build step on their server we need to install create-elm-app.
+
 #### Step 3: Add a build script to the `package.json` file
+
 ```
 "scripts": {
     "build": "elm-app build",
     ...
 }
 ```
+
 #### Step 4: Add a netlify.toml file in the repo's root
+
 ```
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 ```
+
 #### Step 5: Go to the netlify settings and set the publish directory to `build` and the build command to `npm run build`
+
 This step is important to make sure netlify uses the correct build command.
 
 ### GitHub Pages
@@ -894,8 +902,8 @@ Open your `elmapp.config.js` (if you don't have such a file, then you will need 
 ```js
 // and the home page field to the other fields if required:
 module.exports = {
-    homepage: "https://myusername.github.io/my-app"
-}
+  homepage: "https://myusername.github.io/my-app",
+};
 ```
 
 Create Elm App uses the `homepage` field to determine the root URL in the built HTML file.
@@ -930,8 +938,8 @@ You can configure a custom domain with GitHub Pages by adding a `CNAME` file to 
 
 GitHub Pages doesn’t support routers that use the HTML5 `pushState` history API under the hood (for example, React Router using `browserHistory`). This is because when there is a fresh page load for a url like `http://user.github.io/todomvc/todos/42`, where `/todos/42` is a frontend route, the GitHub Pages server returns 404 because it knows nothing of `/todos/42`. If you want to add a router to a project hosted on GitHub Pages, here are a couple of solutions:
 
-* You could switch from using HTML5 history API to routing with hashes.
-* Alternatively, you can use a trick to teach GitHub Pages to handle 404 by redirecting to your `index.html` page with a special redirect parameter. You would need to add a `404.html` file with the redirection code to the `build` folder before deploying your project, and you’ll need to add code handling the redirect parameter to `index.html`. You can find a detailed explanation of this technique [in this guide](https://github.com/rafrex/spa-github-pages).
+- You could switch from using HTML5 history API to routing with hashes.
+- Alternatively, you can use a trick to teach GitHub Pages to handle 404 by redirecting to your `index.html` page with a special redirect parameter. You would need to add a `404.html` file with the redirection code to the `build` folder before deploying your project, and you’ll need to add code handling the redirect parameter to `index.html`. You can find a detailed explanation of this technique [in this guide](https://github.com/rafrex/spa-github-pages).
 
 ## IDE setup for Hot Module Replacement
 

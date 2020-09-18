@@ -49,7 +49,7 @@ update msg model =
         WindowSettingsReceived ({ width, height } as settings) ->
             let
                 roundedWidth =
-                    ceiling <| (width / 20)
+                    floor <| (width / 20)
 
                 roundedHeight =
                     ceiling <| (height / 20)
