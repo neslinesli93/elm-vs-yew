@@ -1,0 +1,13 @@
+{
+  "name": "elm-vs-yew",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:neslinesli93/elm-vs-yew.git",
+  "author": "Tommaso <p.tommy93@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mustache": "^4.0.1",
+    "mustache-express": "^1.3.0"
+  }
+}

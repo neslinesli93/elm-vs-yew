@@ -10,7 +10,8 @@
 }
 
 html,
-body {
+body,
+#elm-root-wrapper {
   height: 100%;
   width: 100%;
 }
@@ -19,7 +20,7 @@ body {
   background: #f5f5f5;
 }
 
-.wrapper {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
