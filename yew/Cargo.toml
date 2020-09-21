@@ -1,5 +1,5 @@
 [package]
-name = "yew"
+name = "yeww"
 version = "0.0.1"
 authors = ["Tommaso Pifferi"]
 edition = "2018"
@@ -24,5 +24,11 @@ wasm-bindgen-test = "0.3"
 [dependencies.web-sys]
 version = "0.3.4"
 features = [
-  'KeyboardEvent',
+  'Document',
+  'DomRect',
+  'Element',
+  'HtmlElement',
+  'HtmlCollection',
+  'Node',
+  'Window',
 ]

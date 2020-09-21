@@ -9,16 +9,27 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/a17t@0.2.8/dist/a17t.css" />
+    <link rel="stylesheet" href="style/homepage.css" />
+    <link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
-    <div id="elm-root-wrapper">
-        <div id="elm-root"></div>
-    </div>
-    <div id="yew-root-wrapper">
-        <div id="yew-root"></div>
+
+    <div class="homepage-wrapper">
+        <div class="hero">
+            <h1>Ciao!</h1>
+        </div>
+
+        <div class="interaction">
+            <div id="elm-root-wrapper">
+                <div id="elm-root"></div>
+            </div>
+            <div id="yew-root-wrapper">
+                <div id="yew-root"></div>
+            </div>
+        </div>
     </div>
 
     {{#scripts}}

@@ -15,6 +15,8 @@ module.exports = (env, argv) => {
       path: distPath,
       filename: "yew.js",
       webassemblyModuleFilename: "yew.wasm",
+      // See https://webpack.js.org/guides/public-path/
+      publicPath: "/yew/",
     },
     module: {
       rules: [

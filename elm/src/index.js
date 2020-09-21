@@ -1,5 +1,6 @@
 import "normalize.css";
 import "./main.css";
+import "../../style/main.css";
 import { Elm } from "./Main.elm";
 
 function getRootWrapperSize() {

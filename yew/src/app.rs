@@ -1,11 +1,17 @@
+use crate::utils;
 use log::*;
 use serde_derive::{Deserialize, Serialize};
 use yew::prelude::*;
-use yew::utils::window;
+use yew::services::resize::{ResizeTask, WindowDimensions};
+use yew::services::ResizeService;
 
+const DIV_SIZE: f64 = 20.0;
+
+#[allow(dead_code)]
 pub struct App {
     link: ComponentLink<Self>,
     state: State,
+    resize: ResizeTask,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -15,6 +21,7 @@ pub struct State {
 
 pub enum Msg {
     Toggle(usize, usize, bool),
+    Resize(WindowDimensions),
 }
 
 impl Component for App {
@@ -22,18 +29,22 @@ impl Component for App {
     type Properties = ();
 
     fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
-        let inner_height =
-            (window().inner_height().unwrap().as_f64().unwrap() / 20.0).ceil() as usize;
-
-        let inner_width =
-            (window().inner_width().unwrap().as_f64().unwrap() / 20.0).floor() as usize;
+        let root_element = utils::get_root_element().get_bounding_client_rect();
+        let inner_height = (root_element.height() / DIV_SIZE).ceil() as usize;
+        let inner_width = (root_element.width() / DIV_SIZE).floor() as usize;
 
         debug!("Creating a grid {:?}x{:?}", inner_height, inner_width);
 
         let entries = vec![vec![false; inner_width]; inner_height];
         let state = State { entries };
 
-        App { link, state }
+        let resize_callback = link.callback(Self::Message::Resize);
+
+        App {
+            link,
+            state,
+            resize: ResizeService::new().register(resize_callback),
+        }
     }
 
     fn change(&mut self, _props: Self::Properties) -> ShouldRender {
@@ -48,6 +59,9 @@ impl Component for App {
             Msg::Toggle(i, j, state) => {
                 self.state.toggle(i, j, state);
             }
+            Msg::Resize(_) => {
+                self.state.resize();
+            }
         }
         true
     }
@@ -56,7 +70,7 @@ impl Component for App {
         debug!("Rendered");
 
         html! {
-            <div class="wrapper" >
+            <div class="container" >
                 {
                     for self.state.entries.iter().enumerate().map(|(i, row)| {
                         html! {
@@ -91,6 +105,20 @@ impl App {
 
 impl State {
     fn toggle(&mut self, i: usize, j: usize, state: bool) {
+        debug!("Toggle");
         self.entries[i][j] = state;
+    }
+
+    fn resize(&mut self) {
+        debug!("Resize");
+
+        let root_element = utils::get_root_element().get_bounding_client_rect();
+        let inner_height = (root_element.height() / DIV_SIZE).ceil() as usize;
+        let inner_width = (root_element.width() / DIV_SIZE).floor() as usize;
+
+        debug!("Creating a grid {:?}x{:?}", inner_height, inner_width);
+
+        let entries = vec![vec![false; inner_width]; inner_height];
+        self.entries = entries;
     }
 }
