@@ -15,8 +15,6 @@
   display: flex;
 }
 
-.interaction > div {
-  -webkit-box-shadow: -2px 5px 15px -2px #000000;
-  -moz-box-shadow: -2px 5px 15px -2px #000000;
-  box-shadow: -2px 5px 15px -2px #000000;
+.flex-1 {
+  flex: 1;
 }

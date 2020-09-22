@@ -70,7 +70,7 @@ impl Component for App {
         debug!("Rendered");
 
         html! {
-            <div class="container" >
+            <div class="grid-wrapper" >
                 {
                     for self.state.entries.iter().enumerate().map(|(i, row)| {
                         html! {

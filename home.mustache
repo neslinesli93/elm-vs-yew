@@ -8,7 +8,7 @@
     <title>Elm vs Yew</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/a17t@0.2.8/dist/a17t.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="style/homepage.css" />
     <link rel="stylesheet" href="style/main.css" />
 </head>
@@ -23,11 +23,26 @@
         </div>
 
         <div class="interaction">
-            <div id="elm-root-wrapper">
-                <div id="elm-root"></div>
+            <div class="card flex-1">
+                <header class="card-header">
+                    <p class="card-header-title">Elm</p>
+                </header>
+                <div class="card-content">
+                    <div id="elm-root-wrapper">
+                        <div id="elm-root"></div>
+                    </div>
+                </div>
             </div>
-            <div id="yew-root-wrapper">
-                <div id="yew-root"></div>
+            
+            <div class="card flex-1">
+                <header class="card-header">
+                    <p class="card-header-title">Yew</p>
+                </header>
+                <div class="card-content">
+                    <div id="yew-root-wrapper">
+                        <div id="yew-root"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

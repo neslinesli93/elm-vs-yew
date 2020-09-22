@@ -84,7 +84,7 @@ update msg model =
 
 view : Model -> Html Msg
 view { entries } =
-    div [ class "container" ]
+    div [ class "grid-wrapper" ]
         (List.indexedMap (\i row -> viewRow row i) entries)
 
 
