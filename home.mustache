@@ -7,7 +7,6 @@
     <meta name="theme-color" content="#000000">
     <title>Elm vs Yew</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="style/homepage.css" />
     <link rel="stylesheet" href="style/main.css" />
@@ -18,29 +17,61 @@
     </noscript>
 
     <div class="homepage-wrapper">
-        <div class="hero">
-            <h1>Ciao!</h1>
+        <div class="text-wrapper">
+            <section class="has-text-centered pt-4">
+                <div class="container">
+                    <h1 class="title">
+                        Elm vs Yew: a benchmark
+                    </h1>
+                    <h2 class="subtitle">
+                        The repo for this website is available
+                        <a href="https://github.com/neslinesli93/elm-vs-yew">here.</a>
+                    </h2>
+                </div>
+            </section>
+
+            <section>
+                <div class="content mx-2 my-6">
+                    <p>
+                        The two sections below contain a grid of equally distributed boxes.
+                        Each box has an attached event handler that applies a specific class on hover,
+                        and removes it when the hover ends.
+                    </p>
+                    <p>
+                        The section on the left is rendered using <a href="https://elm-lang.org/">Elm</a>,
+                        while the one on the right uses <a href="https://yew.rs/">Yew</a>.
+                    </p>
+                </div>
+            </section>
         </div>
 
-        <div class="interaction">
-            <div class="card flex-1">
-                <header class="card-header">
-                    <p class="card-header-title">Elm</p>
-                </header>
-                <div class="card-content">
-                    <div id="elm-root-wrapper">
-                        <div id="elm-root"></div>
+        <div class="panels-wrapper">
+            <div class="panel-wrapper flex-1">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">Elm</p>
+                    </header>
+                </div>
+                <div class="card flex-1">
+                    <div class="card-content">
+                        <div id="elm-root-wrapper">
+                            <div id="elm-root"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="card flex-1">
-                <header class="card-header">
-                    <p class="card-header-title">Yew</p>
-                </header>
-                <div class="card-content">
-                    <div id="yew-root-wrapper">
-                        <div id="yew-root"></div>
+
+            <div class="panel-wrapper flex-1">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">Yew</p>
+                    </header>
+                </div>
+                <div class="card flex-1">
+                    <div class="card-content">
+                        <div id="yew-root-wrapper">
+                            <div id="yew-root"></div>
+                        </div>
                     </div>
                 </div>
             </div>

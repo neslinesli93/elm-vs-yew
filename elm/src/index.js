@@ -1,4 +1,4 @@
-import "normalize.css";
+import "minireset.css";
 import "./main.css";
 import "../../style/main.css";
 import { Elm } from "./Main.elm";

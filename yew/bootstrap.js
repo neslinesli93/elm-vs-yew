@@ -1,4 +1,4 @@
-import "normalize.css";
+import "minireset.css";
 import "../style/main.css";
 
 import("./pkg").then((module) => {
