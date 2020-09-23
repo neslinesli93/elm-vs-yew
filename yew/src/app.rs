@@ -5,7 +5,7 @@ use yew::prelude::*;
 use yew::services::resize::{ResizeTask, WindowDimensions};
 use yew::services::ResizeService;
 
-const DIV_SIZE: f64 = 20.0;
+const DIV_SIZE: f64 = 10.0;
 
 #[allow(dead_code)]
 pub struct App {

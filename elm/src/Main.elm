@@ -34,6 +34,11 @@ initialModel =
     }
 
 
+divSize : Float
+divSize =
+    10.0
+
+
 
 ---- UPDATE ----
 
@@ -49,10 +54,10 @@ update msg model =
         WindowSettingsReceived ({ width, height } as settings) ->
             let
                 roundedWidth =
-                    floor <| (width / 20)
+                    floor <| (width / divSize)
 
                 roundedHeight =
-                    ceiling <| (height / 20)
+                    ceiling <| (height / divSize)
 
                 singleList =
                     List.repeat roundedWidth False

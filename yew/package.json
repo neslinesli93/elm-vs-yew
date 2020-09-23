@@ -4,7 +4,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "build:publicpath": "ASSET_PATH='/yew/' yarn build",
     "start:dev": "webpack-dev-server --mode development",
     "start:prod": "yarn build && serve dist"
   },

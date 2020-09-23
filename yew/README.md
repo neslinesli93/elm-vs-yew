@@ -39,7 +39,7 @@ yarn run build
 Create the production build with a custom `publicPath`:
 
 ```
-ASSET_PATH="/yew/" yarn run build
+YEW_PUBLIC_PATH="/yew/" yarn run build
 ```
 
 ## Batteries Included
