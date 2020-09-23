@@ -4,6 +4,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
+    "build:publicpath": "ASSET_PATH='/yew/' yarn build",
     "start:dev": "webpack-dev-server --mode development",
     "start:prod": "yarn build && serve dist"
   },
@@ -11,6 +12,8 @@
     "@wasm-tool/wasm-pack-plugin": "^1.1.0",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "serve": "^11.3.2",

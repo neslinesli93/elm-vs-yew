@@ -1,8 +1,15 @@
 const path = require("path");
 const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const htmlPath = path.resolve(__dirname, "static/index.html");
 const distPath = path.resolve(__dirname, "dist");
+
+// See https://webpack.js.org/guides/public-path/
+const ASSET_PATH = process.env.ASSET_PATH || "/";
+
 module.exports = (env, argv) => {
   return {
     devServer: {
@@ -15,22 +22,36 @@ module.exports = (env, argv) => {
       path: distPath,
       filename: "yew.js",
       webassemblyModuleFilename: "yew.wasm",
-      // See https://webpack.js.org/guides/public-path/
-      publicPath: "/yew/",
+      publicPath: ASSET_PATH,
     },
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/i,
-          use: ["style-loader", "css-loader", "sass-loader"],
-        },
-        {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader"],
+          use: [MiniCssExtractPlugin.loader, "css-loader"],
         },
       ],
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        inject: true,
+        template: htmlPath,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true,
+        },
+      }),
+      new MiniCssExtractPlugin({
+        filename: "yew.css",
+      }),
       new CopyWebpackPlugin([{ from: "./static", to: distPath }]),
       new WasmPackPlugin({
         crateDirectory: ".",

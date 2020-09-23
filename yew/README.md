@@ -4,29 +4,45 @@ This project is bootstrapped with [Yew wasm pack template](https://github.com/ye
 
 ## About
 
-This template shows how to create a web app using Yew and wasm-pack.
+TODO
 
-## 🚴 Usage
+## Usage
 
-### 🛠️ Build
-
-When building for the first time, ensure to install dependencies first.
+First of all, install the required dependencies
 
 ```
-yarn install
+yarn
 ```
 
-```
-yarn run build
-```
+### Serve locally
 
-### 🔬 Serve locally
+Launch the app in dev mode and open [http://localhost:8000](http://localhost:8000)
 
 ```
 yarn run start:dev
 ```
 
-## 🔋 Batteries Included
+If you want to have a peek at the production build, use this instead and open [http://localhost:5000](http://localhost:5000)
+
+```
+yarn run start:prod
+```
+
+### Build
+
+Create the production build inside `dist/` folder
+
+```
+yarn run build
+```
+
+Create the production build with a custom `publicPath`:
+
+```
+ASSET_PATH="/yew/" yarn run build
+```
+
+## Batteries Included
 
 - [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
   between WebAssembly and JavaScript.
