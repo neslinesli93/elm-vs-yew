@@ -2,16 +2,18 @@
 
 This project is bootstrapped with [Yew wasm pack template](https://github.com/yewstack/yew-wasm-pack-template).
 
-## About
-
-TODO
-
 ## Usage
 
 First of all, install the required dependencies
 
 ```
 yarn
+```
+
+Add `wasm32-unknown-unknown` to your rust toolchain:
+
+```
+rustup target add wasm32-unknown-unknown
 ```
 
 ### Serve locally
