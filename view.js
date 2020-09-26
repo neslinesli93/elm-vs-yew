@@ -13,10 +13,14 @@ function getScripts() {
   const cssFiles = readFiles("./style", "style");
   copyFiles(cssFiles, true);
 
-  return elmFiles
+  const scripts = elmFiles
     .concat(yewFiles)
     .filter((f) => filesForTemplate(f.name))
     .map((f) => path.join(f.publicPath, f.name));
+
+  const shynet = process.env.SHYNET_ENABLED !== undefined;
+
+  return { scripts, shynet };
 }
 
 function readFiles(filesPath, publicPath) {

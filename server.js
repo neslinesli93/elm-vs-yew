@@ -16,9 +16,7 @@ app.use(express.static("dist"));
 rimraf.sync("dist/*");
 
 app.get("/", (req, res) => {
-  res.render("home", {
-    scripts: getScripts(),
-  });
+  res.render("home", getScripts());
 });
 
 app.listen(PORT, () => {
